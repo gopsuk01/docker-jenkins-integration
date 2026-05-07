@@ -17,4 +17,9 @@ public class DockerJenkinsIntegrationApplication {
 	public String dockerIntegrationTest(){
 		return "Docker jenkins integration working now";
 	}
+
+	@GetMapping("/test")
+	public String welcome(){
+		return "Welcome to Jenkins world";
+	}
 }
