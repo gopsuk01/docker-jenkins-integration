@@ -1,5 +1,9 @@
-FROM eclipse-temurin:21-jdk
-WORKDIR /docker-jenkins-integration
-COPY target/docker-jenkins-integration.jar docker-jenkins-integration.jar
+FROM eclipse-temurin:21-jre
+
+WORKDIR /app
+
+COPY target/docker-jenkins-integration.jar app.jar
+
 EXPOSE 8089
-ENTRYPOINT ["java", "-jar", "docker-jenkins-integration.jar"]
+
+ENTRYPOINT ["java", "-jar", "app.jar"]
